@@ -18,7 +18,8 @@ st.title('Stock Trend and Price Prediction')
 # Settings
 start = '2016-01-01'
 end = '2019-12-31'
-user_input = st.text_input("Enter Stock Ticker", 'GOOG')
+st.text("Example stock tickers are - GOOG, GAIL.NS, AAPL, HDFCBANK.NS ")
+user_input = st.text_input("Enter Stock Ticker : ", 'GOOG')
 
 # Making df
 yf.pdr_override()
@@ -84,7 +85,7 @@ x_train, y_train = np.array(x_train), np.array(y_train)
 
 #Testing Part
 past_100_days = data_training.tail(100)
-final_df = past_100_days.append(data_testing, ignore_index = True)
+final_df = pd.concat([past_100_days, data_testing], ignore_index=True)
 
 #scaling down inputs
 inputs = scaler.transform(final_df)
