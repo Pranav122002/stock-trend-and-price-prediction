@@ -7,7 +7,7 @@ This project gives Buy and Sell signals based on predicted Trend by Simple Movin
 * LSTM Model is used to predict stock prices.
 
 ## Demo Link
-See live demo at https://pranav122002-stock-trend-and-price-prediction-app-qahhjz.streamlit.app/
+See live demo at https://pranav122002-stock-trend-and-price-prediction.streamlit.app/
 
 ## Installation
 ```
